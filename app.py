@@ -93,8 +93,8 @@ st.markdown("---")
 st.subheader("👥 Team Credits")
 st.write("""
 - Albert Antony S  
-- Mohamed Imran M.E  
-- Kavi Prasath K  
-- Mugeshwaran S  
-- Sudharsan S
+- Jeevanesh K
+- Elaichandiran S
+- Kumaran M
 """)
+
