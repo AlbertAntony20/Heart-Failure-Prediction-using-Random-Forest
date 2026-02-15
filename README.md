@@ -1,176 +1,75 @@
-# 🫀 Heart Failure Prediction System (Personal Learning Project)
+"""
+# Heart-Failure-Prediction-using-Random-Forest
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-v1.26-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-![Educational](https://img.shields.io/badge/Educational-SelfLearning-orange)
 
----
+## Table of Contents
 
-## **Description**
+- [Project Title](#project-title)
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-getting)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contact](#contact)
 
-This is a **personal learning project** designed to help me understand how to build a **machine learning predictive model** and deploy it as a web application.
-It predicts the **risk of heart failure** using clinical and lifestyle data.
+## About The Project
 
-> ⚠️ **Note:** This project is for **self-learning and educational purposes only**. It is **not intended for medical diagnosis or treatment**.
+Provide a more detailed explanation of what your project does, its goals, and why it was created. Include any key features or functionalities.
 
-The project uses a **Random Forest Classifier** and a **Streamlit UI** to demonstrate the full ML workflow: preprocessing, training, testing, and deployment.
+### Built With
 
----
+List the major frameworks/libraries/technologies used in your project.
+* Python
+* Pandas
+* Scikit-learn
+* Matplotlib
+* imbalanced-learn
 
-## **Table of Contents**
+## Getting Started
 
-1. [Features](#features)
-2. [Dataset](#dataset)
-3. [Installation & Usage](#installation--usage)
-4. [Sample Inputs](#sample-inputs)
-5. [Risk Factors](#risk-factors)
-6. [Technology Stack](#technology-stack)
-7. [Contributors](#contributors)
-8. [License](#license)
-9. [Future Scope](#future-scope)
+To get a local copy up and running follow these simple steps.
 
----
+### Prerequisites
 
-## **Features**
+Ensure you have Python installed. This project also requires several Python libraries which can be installed via pip.
 
-* Predicts **High Risk** or **Low Risk** of heart failure.
-* Accepts **user-friendly input fields** (plain language, no medical expertise required).
-* Demonstrates **ML workflow**: preprocessing, scaling, training, and prediction.
-* Real-time prediction through a **Streamlit web interface**.
-* Personal learning project for **practice in ML and deployment**.
+*   pip
 
----
+### Installation
 
-## **Dataset**
+1.  Clone the repo
+    ```bash
+    git clone https://github.com/your_username/your_project.git
+    ```
+2.  Navigate to the project directory
+    ```bash
+    cd your_project
+    ```
+3.  Install Python packages
+    ```bash
+    pip install pandas scikit-learn matplotlib imbalanced-learn joblib
+    ```
+4.  Place your `heart.csv` dataset and `model.pkl` file in the project root directory.
 
-This project uses the **Heart Failure Prediction Dataset** from Kaggle:
+## Usage
 
-➡️ [Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/guriya79/heart-failure-prediction-dataset)
+Describe how to use your project. For example:
 
-**Dataset Features:**
+To run the analysis and model evaluation:
 
-* Age, Sex
-* Anaemia, Diabetes, High Blood Pressure
-* Ejection Fraction (%)
-* Platelets (thousands/mL)
-* Serum Creatinine (mg/dL), Serum Sodium (mEq/L)
-* Smoking
-
----
-
-## **Installation & Usage**
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/yourusername/heart-failure-prediction.git
-cd heart-failure-prediction
+```python
+# Open and run the Jupyter notebook:
+# your_notebook_name.ipynb
 ```
 
-### 2. Install dependencies
+This will load the data, split it, load the pre-trained model, make predictions, calculate accuracy, and display a confusion matrix and accuracy graph. It also includes steps for data balancing using SMOTE and re-evaluating the model's performance with new metrics.
 
-```bash
-pip install -r requirements.txt
-```
+## License
 
-### 3. Run the Streamlit app
+Distributed under the MIT License. See `LICENSE` for more information.
 
-```bash
-streamlit run app.py
-```
+## Contact
 
-### 4. Use the Website/App
-
-* Enter sample health data to see predictions.
-* Observe how input features influence the model output.
-* Website: [Heart Failure Risk Prediction using Random Forest](https://heart-failure-prediction-using-random-forest-cseb2rlzkv9csuajb.streamlit.app/)
-
-> ⚠️ **Reminder:** This Website/App is for **personal learning only** and **not a real diagnostic tool**.
-
----
-
-## **Sample Inputs**
-
-### High Risk Example
-
-| Field                    | Value |
-| ------------------------ | ----- |
-| Age                      | 75    |
-| Anaemia                  | Yes   |
-| Diabetes                 | Yes   |
-| Ejection Fraction (%)    | 25    |
-| High Blood Pressure      | Yes   |
-| Platelets (thousands/mL) | 220   |
-| Serum Creatinine (mg/dL) | 2.2   |
-| Serum Sodium (mEq/L)     | 128   |
-| Sex                      | Male  |
-| Smoking                  | Yes   |
-
-### Low Risk Example
-
-| Field                    | Value |
-| ------------------------ | ----- |
-| Age                      | 58    |
-| Anaemia                  | No    |
-| Diabetes                 | No    |
-| Ejection Fraction (%)    | 45    |
-| High Blood Pressure      | No    |
-| Platelets (thousands/mL) | 280   |
-| Serum Creatinine (mg/dL) | 1.0   |
-| Serum Sodium (mEq/L)     | 138   |
-| Sex                      | Male  |
-| Smoking                  | No    |
-
----
-
-## **Risk Factors**
-
-| Factor                                    | High Risk            | Low Risk                                                     |
-| ----------------------------------------- | -------------------- | ------------------------------------------------------------ |
-| Age                                       | ≥70                  | <60                                                          |
-| Heart Pump Efficiency (Ejection Fraction) | <35%                 | 50–70%                                                       |
-| Anaemia                                   | Yes                  | No                                                           |
-| Diabetes                                  | Yes                  | No                                                           |
-| High Blood Pressure                       | Yes                  | No                                                           |
-| Kidney Function (Creatinine)              | >1.5 mg/dL           | 0.6–1.3 mg/dL                                                |
-| Blood Sodium                              | <133 mEq/L           | 135–145 mEq/L                                                |
-| Platelets                                 | Abnormal             | Normal (250–400k/mL)                                         |
-| CPK (Enzyme Level)                        | Very High (>600)     | Normal/Moderate (≈180–350)                                   |
-| Sex                                       | Male slightly higher | Female slightly lower (estrogen protection, until menopause) |
-| Smoking                                   | Yes                  | No                                                           |
-
-> Women have slightly lower risk due to hormonal protection, but risk increases after menopause (~45–55 years).
-
----
-
-## **Technology Stack**
-
-* **Python** – ML modeling and preprocessing
-* **scikit-learn** – Random Forest & scaling
-* **Streamlit** – Web interface deployment
-* **NumPy & Pandas** – Data handling
-* **pickle** – Model serialization
-
----
-
-## **Contributors**
-
-* Albert Antony S (personal learning project)
-
----
-
-## **License**
-
-This project is licensed under the **MIT License**.
-
----
-
-## **Future Scope (Educational Enhancements)**
-
-* Display **risk probability (%)** to learn probability interpretation.
-* Add **visualizations** of feature importance to understand model decisions.
-* Compare **multiple ML models** (Random Forest, Logistic Regression, XGBoost) for learning model evaluation.
-* Expand dataset to practice **advanced ML techniques**.
-* Add **graphs/charts** for better visualization of risk factors.
-
+Albert Antony S - [albertantony1820@gmail.com]
