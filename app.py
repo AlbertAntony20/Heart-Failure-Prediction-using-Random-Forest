@@ -22,7 +22,7 @@ else:
 # -----------------------------
 st.set_page_config(page_title="Heart Failure Prediction", page_icon="🫀", layout="centered")
 st.title("🫀 Heart Failure Prediction System")
-st.write("Enter your health information below to predict your risk of heart failure. No medical expertise needed!")
+st.write("Enter your health information below to predict your risk of heart failure.")
 
 # -----------------------------
 # User-friendly input fields
@@ -97,4 +97,5 @@ st.write("""
 - Elaichandiran S
 - Kumaran M
 """)
+
 
